@@ -1,0 +1,37 @@
+require("julianbl.config.remap")
+require("julianbl.config.lazy")
+
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.guicursor = "n-v-i-c:block-Cursor" -- Always use block cursor
+
+local tab = 4
+vim.o.tabstop = tab
+vim.o.softtabstop = tab
+vim.o.shiftwidth = tab
+vim.o.smartindent = true
+
+vim.o.wrap = false
+
+vim.o.swapfile = false
+vim.o.backup = false
+vim.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.o.undofile = true
+
+vim.o.hlsearch = false
+vim.o.incsearch = true
+
+vim.o.termguicolors = true
+
+vim.o.signcolumn = "yes"
+vim.o.scrolloff = 8
+
+vim.o.updatetime = 50
+
+local colcolumn = 100
+vim.o.colorcolumn = "" .. colcolumn
+vim.cmd("hi ColorColumn ctermbg=235 guibg=#2a2a2a")
+vim.cmd("autocmd WinLeave * set colorcolumn=0")
+vim.cmd("autocmd WinEnter * set colorcolumn=" .. colcolumn)
+
+vim.o.mouse = ""
