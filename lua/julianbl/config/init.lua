@@ -51,6 +51,15 @@ vim.api.nvim_create_autocmd(
 		end,
 	}
 )
+vim.api.nvim_create_autocmd(
+	"BufWritePost",
+	{
+		group = "AutoFormat",
+		callback = function()
+			vim.cmd("silent lua vim.lsp.buf.format()")
+		end,
+	}
+)
 
 vim.cmd [[
 	highlight Normal guibg=none
