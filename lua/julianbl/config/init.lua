@@ -31,9 +31,9 @@ vim.o.updatetime = 50
 local colcolumn = 100
 vim.o.colorcolumn = "" .. colcolumn
 -- Gruvbox colorcolumn
---vim.cmd("hi ColorColumn ctermbg=235 guibg=#2a2a2a")
+vim.cmd("hi ColorColumn ctermbg=235 guibg=#2a2a2a")
 -- Catppuccin colorcolumn
-vim.cmd("hi ColorColumn ctermbg=235 guibg=#494d64")
+--vim.cmd("hi ColorColumn ctermbg=235 guibg=#494d64")
 vim.cmd("autocmd WinLeave * set colorcolumn=0")
 vim.cmd("autocmd WinEnter * set colorcolumn=" .. colcolumn)
 
