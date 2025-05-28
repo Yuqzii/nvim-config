@@ -46,6 +46,8 @@ return {
 
 			opts.desc = "Restart LSP"
 			vim.keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts)
+
+			vim.cmd("LspStop 2")
 		end
 
 		-- Used to enable autocompletion (assign to every lsp server config)
