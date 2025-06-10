@@ -11,6 +11,8 @@ vim.o.softtabstop = tab
 vim.o.shiftwidth = tab
 vim.o.smartindent = true
 
+vim.o.splitright = true
+
 vim.o.wrap = false
 
 vim.o.swapfile = false
