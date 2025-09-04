@@ -23,6 +23,9 @@ return {
 				"lua_ls",
 				"pyright",
 				"gopls",
+				"html",
+				"cssls",
+				"ts_ls"
 			},
 			automatic_installation = true,
 			automatic_enable = false,
