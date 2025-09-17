@@ -8,7 +8,7 @@ return {
 
 			override_by_extension = {
 				["go"] = {
-					icon = "󰟓",
+					icon = "",
 					color = "#00aed8",
 					name = "Go",
 				},
@@ -16,12 +16,12 @@ return {
 
 			override_by_filename = {
 				["go.mod"] = {
-					icon = "󰟓",
+					icon = "",
 					color = "#00aed8",
 					name = "Go",
 				},
 				["go.sum"] = {
-					icon = "󰟓",
+					icon = "",
 					color = "#00aed8",
 					name = "Go",
 				},
