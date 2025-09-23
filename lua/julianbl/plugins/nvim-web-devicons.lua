@@ -1,7 +1,8 @@
 return {
 	"nvim-tree/nvim-web-devicons",
 	config = function()
-		require("nvim-web-devicons").setup({
+		local devicons = require("nvim-web-devicons")
+		devicons.setup({
 			default = true,
 			strict = true,
 			variant = "dark",
@@ -27,5 +28,15 @@ return {
 				},
 			},
 		})
+
+		vim.api.nvim_set_hl(0, "Dockerfile", { fg = "#458EE6" })
+		local original_get_icon = devicons.get_icon
+		devicons.get_icon = function(filename, ext, opts)
+			if filename:match("^Dockerfile") then
+				return "", "Dockerfile"
+			end
+
+			return original_get_icon(filename, ext, opts)
+		end
 	end
 }
