@@ -48,8 +48,10 @@ vim.api.nvim_create_autocmd(
 		pattern = "*.go",
 		group = "AutoFormat",
 		callback = function()
+			local save = vim.fn.winsaveview()
 			vim.cmd("silent !gofmt -w -s ./")
 			vim.cmd("edit")
+			vim.fn.winrestview(save)
 		end,
 	}
 )
@@ -58,7 +60,9 @@ vim.api.nvim_create_autocmd(
 	{
 		group = "AutoFormat",
 		callback = function()
+			local save = vim.fn.winsaveview()
 			vim.cmd("silent lua vim.lsp.buf.format()")
+			vim.fn.winrestview(save)
 		end,
 	}
 )
