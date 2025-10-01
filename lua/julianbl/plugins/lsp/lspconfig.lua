@@ -102,6 +102,11 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["golangci_lint_ls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		lspconfig["html"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,

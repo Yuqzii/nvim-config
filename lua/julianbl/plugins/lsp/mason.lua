@@ -25,7 +25,8 @@ return {
 				"gopls",
 				"html",
 				"cssls",
-				"ts_ls"
+				"ts_ls",
+				"golangci_lint_ls"
 			},
 			automatic_installation = true,
 			automatic_enable = false,
