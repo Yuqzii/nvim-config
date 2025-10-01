@@ -26,7 +26,8 @@ return {
 				"html",
 				"cssls",
 				"ts_ls",
-				"golangci_lint_ls"
+				"golangci_lint_ls",
+				"eslint"
 			},
 			automatic_installation = true,
 			automatic_enable = false,
