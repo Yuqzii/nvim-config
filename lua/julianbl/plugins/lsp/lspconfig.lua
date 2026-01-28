@@ -6,7 +6,6 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local opts = { noremap = true, silent = true }
@@ -66,20 +65,12 @@ return {
 			},
 		})
 
-		-- Configure C++ server
-		lspconfig["clangd"].setup({
+		vim.lsp.config("*", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
-
-		-- Configure Python server
-		lspconfig["pyright"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
 		-- Configure Lua server
-		lspconfig["lua_ls"].setup({
+		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = {
@@ -95,36 +86,6 @@ return {
 					},
 				},
 			},
-		})
-
-		lspconfig["gopls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig["golangci_lint_ls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig["html"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig["cssls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig["ts_ls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig["eslint"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
 		})
 	end
 }
