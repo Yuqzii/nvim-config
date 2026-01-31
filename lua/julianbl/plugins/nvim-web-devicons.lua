@@ -33,7 +33,7 @@ return {
 		local original_get_icon = devicons.get_icon
 		devicons.get_icon = function(filename, ext, opts)
 			if filename:match("^Dockerfile") then
-				return "", "Dockerfile"
+				return "󰡨", "Dockerfile"
 			end
 
 			return original_get_icon(filename, ext, opts)
