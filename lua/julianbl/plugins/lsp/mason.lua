@@ -32,7 +32,7 @@ return {
 				"css_variables",
 			},
 			automatic_installation = true,
-			automatic_enable = false,
+			automatic_enable = true,
 		})
 	end
 }
