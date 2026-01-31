@@ -13,6 +13,11 @@ return {
 					color = "#00aed8",
 					name = "Go",
 				},
+				["css"] = {
+					icon = "",
+					color = "#9051cf",
+					name = "CSS",
+				},
 			},
 
 			override_by_filename = {
