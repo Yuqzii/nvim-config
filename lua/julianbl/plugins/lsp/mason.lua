@@ -27,7 +27,9 @@ return {
 				"cssls",
 				"ts_ls",
 				"golangci_lint_ls",
-				"eslint"
+				"eslint",
+				"codebook",
+				"css_variables",
 			},
 			automatic_installation = true,
 			automatic_enable = false,
