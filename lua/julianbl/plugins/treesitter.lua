@@ -11,7 +11,7 @@ return {
 				disable = {},
 			},
 		})
-		treesitter.install({ "c", "cpp", "lua", "go", "vim", "vimdoc", "javascript", "html", "python" })
+		treesitter.install({ "c", "cpp", "lua", "go", "vim", "vimdoc", "javascript", "html", "python", "sql" })
 
 		-- Force attach to Go files, didn't want to start otherwise for some reason.
 		vim.api.nvim_create_autocmd("FileType", {
