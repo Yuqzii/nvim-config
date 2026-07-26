@@ -1,5 +1,6 @@
 ; extends
 
+;; SQL stuff
 ([
   (raw_string_literal_content)
   (interpreted_string_literal_content)
@@ -69,3 +70,15 @@
 ] @injection.content
   (#lua-match? @injection.content "^%s*[Tt][Rr][Uu][Nn][Cc][Aa][Tt][Ee]%s")
   (#set! injection.language "sql"))
+
+
+;; Jinja stuff
+;; Treat Jinja expressions and statement blocks inside C++ files as Jinja
+((comment) @injection.content
+  (#set! injection.language "jinja"))
+
+;; Force parser to scan {{ ... }} and {% ... %} anywhere in the document
+([
+  (ERROR)
+] @injection.content
+  (#set! injection.language "jinja_inline"))

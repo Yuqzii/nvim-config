@@ -73,3 +73,10 @@ vim.cmd [[
 	highlight Normal ctermbg=none
 	highlight NonText ctermbg=none
 ]]
+
+vim.filetype.add({
+	pattern = {
+		[".*%.hpp%.jinja"] = "cpp.jinja",
+		[".*%.cpp%.jinja"] = "cpp.jinja",
+	},
+})

@@ -87,5 +87,14 @@ return {
 				},
 			},
 		})
+
+		vim.lsp.config("clangd", {
+			capabilities = capabilities,
+			filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "cpp.jinja" },
+		})
+		vim.lsp.config("jinja_lsp", {
+			capabilities = capabilities,
+			filetypes = {"jinja", "cpp.jinja"},
+		})
 	end
 }
