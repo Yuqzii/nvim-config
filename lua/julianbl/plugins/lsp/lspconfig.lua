@@ -92,6 +92,14 @@ return {
 			capabilities = capabilities,
 			filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "cpp.jinja" },
 		})
+		vim.lsp.config("gopls", {
+			capabilities = capabilities,
+			settings = {
+				gopls = {
+					buildFlags = { "-tags=e2e" },
+				},
+			},
+		})
 		vim.lsp.config("jinja_lsp", {
 			capabilities = capabilities,
 			filetypes = {"jinja", "cpp.jinja"},

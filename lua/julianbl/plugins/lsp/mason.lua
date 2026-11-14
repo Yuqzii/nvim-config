@@ -30,6 +30,7 @@ return {
 				"eslint",
 				"css_variables",
 				"jinja_lsp",
+				"templ",
 			},
 			automatic_installation = true,
 			automatic_enable = true,
